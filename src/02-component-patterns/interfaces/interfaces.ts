@@ -1,26 +1,23 @@
-import { ReactElement } from 'react';
-
-export interface ProductCardProps {
-  product: Product;
-  children?: ReactElement | ReactElement[]
-}
+import { ProductCardProps } from "../components/ProductCard";
+import { PropsTitle } from "../components/ProductTitle";
+import { PropsImage } from '../components/ProductImage';
+import { PropsButtons } from "../components/ProductButtons";
 
 export interface Product {
   id: string,
   title: string,
-  description?: string,
   img?: string
 }
 
 export interface ProductContextProps {
   counter: number;
-  increaseBy: ( value: number ) => void;
   product: Product;
+  increaseBy: ( value: number ) => void;
 }
 
-export interface ProductCardHOCProps {
+export interface ProductCardHOCProps { // Esto es para los componentes basado en propiedas ej: <ProductCard.Title />
   ({ children, product }: ProductCardProps ):JSX.Element,
-  Title: ({ title }: { title?: string }) => JSX.Element,
-  Image: ({ img }: { img?: string }) => JSX.Element,
-  Buttons: () => JSX.Element
+  Title:    ( Props: PropsTitle )  => JSX.Element,
+  Image:    ( Props: PropsImage )   => JSX.Element,
+  Buttons:  ( Props: PropsButtons ) => JSX.Element
 }
