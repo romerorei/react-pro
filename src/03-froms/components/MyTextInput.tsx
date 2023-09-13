@@ -11,9 +11,10 @@ interface Props {
 
 export const MyTextInput = ({ label, ...props }: Props ) => {
 
-  const [ field, meta ] = useField(props)
-  console.log(field)
-  console.log(meta)
+  //const [ field, meta ] = useField(props)
+  const [ field ] = useField(props)
+  // console.log(field)
+  // console.log(meta)
 
   return (
     <>

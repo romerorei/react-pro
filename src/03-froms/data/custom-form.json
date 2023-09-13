@@ -1,0 +1,73 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "First name",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "msg": "El campo es requerido"
+      },
+      {
+        "type": "minLength",
+        "value": 5,
+        "msg": "El campo debe ser mayor a"
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Last name",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "msg": "El campo es requerido"
+      },
+      {
+        "type": "minLength",
+        "value": 5,
+        "msg": "El campo debe ser mayor a"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Ex: email@email.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "msg": "El campo es requerido"
+      },
+      {
+        "type": "email",
+        "msg": "Debe ser un email valido"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "user@user.com",
+    "options": [
+      {"id":1,"label":"Mario Bros"},
+      {"id":2,"label":"Fifa 2023"},
+      {"id":3,"label":"Metal Gear"},
+      {"id":4,"label":"Duke Nuke"},
+      {"id":5,"label":"Doom"} ],
+    "validations": [
+      {
+        "type": "required",
+        "msg": "El campo es requerido"
+      }
+    ]
+  }
+]

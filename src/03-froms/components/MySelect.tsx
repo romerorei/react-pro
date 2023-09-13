@@ -10,9 +10,10 @@ interface Props {
 
 export const MySelect = ({ label, ...props }: Props ) => {
 
-  const [ field, meta ] = useField(props)
-  console.log(field)
-  console.log(meta)
+  // const [ field, meta ] = useField(props)
+  const [ field ] = useField(props)
+  // console.log(field)
+  // console.log(meta)
 
   return (
     <>

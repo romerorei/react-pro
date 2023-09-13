@@ -5,9 +5,10 @@ import { FormikBasicPage } from '../03-froms/pages/FormikBasicPage'
 import { FormikYupPage } from '../03-froms/pages/FormikYupPage'
 import { FormikComponents } from '../03-froms/pages/FormikComponents'
 import { FormikAbstratation } from '../03-froms/pages/FormikAbstractation'
+import { RegisterFormikPage } from '../03-froms/pages/RegisterFormikPage'
 
 import logo from '../logo.svg'
-import { RegisterFormikPage } from '../03-froms/pages/RegisterFormikPage'
+import { DynamicForm } from '../03-froms/pages/DynamicForm'
 
 const Navigation = () => {
   return (
@@ -34,6 +35,9 @@ const Navigation = () => {
             <li>
               <NavLink to="/register-formik-page" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Register Formik Page</NavLink>
             </li>
+            <li>
+              <NavLink to="/dynamic-form" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Dynamic Form</NavLink>
+            </li>
           </ul>
         </nav>
 
@@ -44,6 +48,7 @@ const Navigation = () => {
           <Route path="formik-components" element={<FormikComponents/>} />
           <Route path="formik-abstratation" element={<FormikAbstratation/>} />
           <Route path="register-formik-page" element={<RegisterFormikPage/>} />
+          <Route path="dynamic-form" element={<DynamicForm/>} />
 
           <Route path="/*" element={<Navigate to="/home" replace />} />
         </Routes>

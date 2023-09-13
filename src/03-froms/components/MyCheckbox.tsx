@@ -8,9 +8,10 @@ interface Props {
 
 export const MyCheckbox = ({ label, ...props }: Props ) => {
 
-  const [ field, meta ] = useField({ ...props, type: 'checkbox' })
-  console.log(field)
-  console.log(meta)
+  const [ field ] = useField({ ...props, type: 'checkbox' })
+  //const [ field, meta ] = useField({ ...props, type: 'checkbox' })
+  // console.log(field)
+  // console.log(meta)
 
   return (
     <>
